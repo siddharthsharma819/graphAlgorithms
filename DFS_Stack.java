@@ -22,6 +22,7 @@ class Graph
     void dfs()
     {
         boolean visited[]=new boolean[this.v];
+		dfsTraverse(x,visited);
         for(int i=0;i<this.v;i++)
         {
             if(!visited[i])
@@ -95,6 +96,6 @@ class Test
         System.out.println("Following is Depth First Traversal "+
                            "(starting from vertex 1)");
  
-        g.dfs();
+        g.dfs(1);
 	}
 }

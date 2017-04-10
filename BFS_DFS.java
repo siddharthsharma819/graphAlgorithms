@@ -19,9 +19,10 @@ class Graph
     {
         al[x-1].add(y-1);
     }
-    void dfs()
+    void dfs(int x)
     {
         boolean visited[]=new boolean[this.v];
+		dfsTraverse(x,visited);
         for(int i=0;i<this.v;i++)
         {
             if(!visited[i])
@@ -89,9 +90,9 @@ class Test
                            "(starting from vertex 1)");
  
         g.bfs(1);
-        System.out.println("Following is Breadth First Traversal "+
+        System.out.println("Following is Depth First Traversal "+
                            "(starting from vertex 1)");
  
-        g.dfs();
+        g.dfs(1);
 	}
 }
